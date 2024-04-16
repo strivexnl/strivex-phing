@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="PhingTaskTest" description="Testing Phing Tasks" default="default" basedir=".">
+
+    <target name="default">
+        <fail msg="Use one of the other targets!" />
+    </target>
+
+    <resolvepath propertyName="dir.strivex-phing" file="./strivex-phing" />
+    <resolvepath propertyName="dir.strivex-phing.classpath" file="${dir.strivex-phing}/vendor" />
+    <resolvepath propertyName="dir.strivex-phing.classpathref" file="${dir.strivex-phing}/vendor/autoload.php" />
+
+    <includepath classpath="${dir.strivex-phing.classpath}" />
+    <taskdef
+            name="tolowercase"
+            classname="Strivex\Phing\Task\String\ToLowerCaseTask"
+            classpathref="${dir.strivex-phing.classpathref}"/>
+    <taskdef
+            name="touppercase"
+            classname="Strivex\Phing\Task\String\ToUpperCaseTask"
+            classpathref="${dir.strivex-phing.classpathref}"/>
+
+    <target name="Test All" depends="String Stuff">
+
+        <echoproperties regex="/^test.*/" />
+    </target>
+
+    <target name="String Stuff">
+        <property name="test.text" value="Some Big Words" />
+        <tolowercase input="${test.text}" propertyName="test.text.lowercase" />
+        <touppercase input="${test.text}" propertyName="test.text.uppercase" />
+
+    </target>
+
+</project>

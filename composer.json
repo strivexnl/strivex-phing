@@ -1,0 +1,23 @@
+{
+    "name": "strivexnl/strivex-phing",
+    "description": "Some custom Phing tasks",
+    "version": "0.1.0",
+    "type": "phing-tasks",
+    "licence": "MIT",
+    "authors": [
+        {
+            "name": "S.E. Franke",
+            "email": "sven.franke@strivex.nl"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phing/phing": "3.*@RC"
+    },
+    "minimum-stability": "alpha",
+    "autoload": {
+        "psr-4": {
+            "Strivex\\Phing\\": "src/"
+        }
+    }
+}
