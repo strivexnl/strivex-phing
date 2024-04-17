@@ -1,4 +1,4 @@
-# Version 0.1.0-alpha.1
+# Version 0.1.0
 - First release.
 - Added custom Phing tasks
   - Strivex\Phing\Task\String\

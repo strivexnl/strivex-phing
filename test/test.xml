@@ -21,7 +21,7 @@
 
     <target name="Test All" depends="String Stuff">
 
-        <echoproperties regex="/^test.*/" />
+        <echoproperties  />
     </target>
 
     <target name="String Stuff">

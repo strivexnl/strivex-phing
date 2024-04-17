@@ -14,7 +14,7 @@ $ composer require strivexnl/strivex-phing
 
 2. __Load the autoloader in your build.xml__ 
 ```xml
-<property name="vendor.dir" value="${basedir}/vendor" />
+<property name="vendor.dir" value="${base.dir}/vendor" />
 <includepath classpath="$(vendor.dir}/autoload.php" />
 ```
 
@@ -40,7 +40,7 @@ Here is the complete example:
 <project name="Strivex Phing Example" default="test" basedir=".">
 
     <!-- Include the autoloader -->
-    <property name="vendor.dir" value="${basedir}/vendor" />
+    <property name="vendor.dir" value="${base.dir}/vendor" />
     <includepath classpath="$(vendor.dir}/autoload.php" />
 
     <!-- Define the custom task -->
