@@ -3,7 +3,11 @@
     "description": "Some custom Phing tasks",
     "version": "0.1.0-alpha.1",
     "type": "phing-tasks",
-    "licence": "MIT",
+    "keywords": [
+        "phing",
+        "tasks"
+    ],
+    "licence": "proprietary",
     "authors": [
         {
             "name": "S.E. Franke",
