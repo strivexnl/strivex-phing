@@ -3,20 +3,9 @@ namespace Strivex\Phing\Task\String;
 
 use Phing\Task;
 
-class ToLowerCaseTask extends Task {
-    
-    private $input;
-    private $propertyName;
-    
-    public function setInput($value) {
-        $this->input = $value;
-    }
-    
-    public function setPropertyName($value) {
-        $this->propertyName = $value;
-    }
+class ToLowerCaseTask extends AbstractStringCaseTask {
     
     public function main() {
-        $this->getProject()->setProperty($this->propertyName, strtolower($this->input));
+        $this->getProject()->setProperty($this->propertyName, $this->toLowerCase($this->input));
     }
 }

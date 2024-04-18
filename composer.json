@@ -1,22 +1,25 @@
 {
     "name": "strivexnl/strivex-phing",
     "description": "Some custom Phing tasks",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "type": "phing-tasks",
     "keywords": [
         "phing",
         "tasks"
     ],
-    "licence": "proprietary",
+    "licence": "LGPL-3.0-or-later",
     "authors": [
         {
             "name": "S.E. Franke",
             "email": "sven.franke@strivex.nl"
         }
     ],
-    "require": {},
-    "require-dev": {
+    "require": {
+        "php": ">= 7.4",
+        "strivexnl/strivex-commons": "^1.0",
         "phing/phing": "3.*@RC"
+    },
+    "require-dev": {
     },
     "minimum-stability": "alpha",
     "autoload": {
