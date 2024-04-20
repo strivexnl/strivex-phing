@@ -1,4 +1,4 @@
-# Strives\Phing\Task\String
+# Strivex\Phing\Task\String
 
 ## How to use the Strings tasks?
 1. __Make sure Strivex\Phing is installed__
@@ -48,24 +48,24 @@
    ```
 
 ## Available Custom String Tasks
-As seen in the examples above, we define the task names like ```lowercase```, ```uppercase```. 
+As seen in the examples above, we define the task names like `lowercase`, `uppercase`. 
 In all our examples we will use these task names. See the table below.
 
 | Task (1)                        | Class (2)        | Input             | Result                      |
 |---------------------------------|------------------|-------------------|-----------------------------| 
-| [lowercase](#tolowercasetask)   | ToLowerCaseTask  | This is some text | ```this is some text```     |
-| [uppercase](#touppercasetask)   | ToUpperCaseTask  | This is some text | ```THIS IS SOME TEXT```     |
-| [pascalcase](#topascalcasetask) | ToPascalCaseTask | This is some text | ```ThisIsSomeText```        |
-| [camelcase](#tocamelcasetask)   | ToCamelCaseTask  | This is some text | ```thisIsSomeText```        |
-| [snakecase](#tosnakecasetask)   | ToSnakeCaseTask  | This is some text | ```this_is_some_text```     |
-| [kebabcase](#tokebabcasetask)   | ToKebabCaseTask  | This is some text | ```this-is-some-text```     |
+| [lowercase](#tolowercasetask)   | ToLowerCaseTask  | This is some text |`this is some text`     |
+| [uppercase](#touppercasetask)   | ToUpperCaseTask  | This is some text |`THIS IS SOME TEXT`     |
+| [pascalcase](#topascalcasetask) | ToPascalCaseTask | This is some text |`ThisIsSomeText`        |
+| [camelcase](#tocamelcasetask)   | ToCamelCaseTask  | This is some text |`thisIsSomeText`        |
+| [snakecase](#tosnakecasetask)   | ToSnakeCaseTask  | This is some text |`this_is_some_text`     |
+| [kebabcase](#tokebabcasetask)   | ToKebabCaseTask  | This is some text |`this-is-some-text`     |
 | [stringcase](#stringcasetask)   | ToStringCaseTask | This is some text | Depending in the used cases |
 
-1. _We assume these task definitions names_
-2. _All case tasks are in the ````Strivex\Phing\Task\String```` namespace._
+1. _We assume these task definitions names._
+2. _All case tasks are in the `Strivex\Phing\Task\String` namespace._
 
 ### ToLowerCaseTask
-The ToLowerCaseTask function will simply convert the input to a ```lowercase``` string.
+The ToLowerCaseTask function will simply convert the input to a `lowercase` string.
 
 | Name         | Type   | Description                      | Default | Required |
 |--------------|--------|----------------------------------|:--------|:--------:|
@@ -79,7 +79,7 @@ Example:
 ```
 
 ### ToUpperCaseTask
-The ToLowerCaseTask function will simply convert the input to an ```UPPERCASE``` string.
+The ToLowerCaseTask function will simply convert the input to an`UPPERCASE` string.
 
 | Name         | Type   | Description                      | Default | Required |
 |--------------|--------|----------------------------------|:--------|:--------:|
@@ -93,7 +93,7 @@ Example:
 ```
 
 ### ToPascalCaseTask
-The ToPascalCaseTask function will convert the input to a ```PascalCased``` string.
+The ToPascalCaseTask function will convert the input to a`PascalCased` string.
 
 | Name         | Type    | Description                      | Default | Required |
 |--------------|---------|----------------------------------|:--------|:--------:|
@@ -101,7 +101,7 @@ The ToPascalCaseTask function will convert the input to a ```PascalCased``` stri
 | propertyName | String  | The name of the property to set. | n/a     |   yes    |
 | leaveSlashes | Boolean | Leave slashes untouched          | false   |    no    |
 | delimiter    | String  | Delimiter used in leaveSlashes   | "/"     |    no    |
-_When using leaveSlashes the ```PascalCase``` will be used on all parts individually!_
+_When using leaveSlashes the`PascalCase` will be used on all parts individually!_
 
 Example:
 ```xml
@@ -113,7 +113,7 @@ Example:
 ```
 
 ### ToCamelCaseTask
-The ToCamelCaseTask function will convert the input to a ```camelCased``` string.
+The ToCamelCaseTask function will convert the input to a`camelCased` string.
 
 | Name         | Type    | Description                      | Default | Required |
 |--------------|---------|----------------------------------|:--------|:--------:|
@@ -121,7 +121,7 @@ The ToCamelCaseTask function will convert the input to a ```camelCased``` string
 | propertyName | String  | The name of the property to set. | n/a     |   yes    |
 | leaveSlashes | Boolean | Leave slashes untouched          | false   |    no    |
 | delimiter    | String  | Delimiter used in leaveSlashes   | "/"     |    no    |
-_When using leaveSlashes the ```camelCase``` will be used on all parts individually!_
+_When using leaveSlashes the`camelCase` will be used on all parts individually!_
 
 Example:
 ```xml
@@ -133,7 +133,7 @@ Example:
 ```
 
 ### ToSnakeCaseTask
-The ToSnakeCaseTask function will convert the input to a ```snake_cased``` string.
+The ToSnakeCaseTask function will convert the input to a`snake_cased` string.
 
 | Name         | Type    | Description                      | Default | Required |
 |--------------|---------|----------------------------------|:--------|:--------:|
@@ -141,7 +141,7 @@ The ToSnakeCaseTask function will convert the input to a ```snake_cased``` strin
 | propertyName | String  | The name of the property to set. | n/a     |   yes    |
 | leaveSlashes | Boolean | Leave slashes untouched          | false   |    no    |
 | delimiter    | String  | Delimiter used in leaveSlashes   | "/"     |    no    |
-_When using leaveSlashes the ```snake-case``` will be used on all parts individually!_
+_When using leaveSlashes the`snake-case` will be used on all parts individually!_
 
 Example:
 ```xml
@@ -153,7 +153,7 @@ Example:
 ```
 
 ### ToKebabCaseTask
-The ToKebabCase function will convert the input to a ```kebab-cased``` string.
+The ToKebabCase function will convert the input to a`kebab-cased` string.
 
 | Name         | Type    | Description                      | Default | Required |
 |--------------|---------|----------------------------------|:--------|:--------:|
@@ -161,7 +161,7 @@ The ToKebabCase function will convert the input to a ```kebab-cased``` string.
 | propertyName | String  | The name of the property to set. | n/a     |   yes    |
 | leaveSlashes | Boolean | Leave slashes untouched          | false   |    no    |
 | delimiter    | String  | Delimiter used in leaveSlashes   | "/"     |    no    |
-_When using leaveSlashes the ```kebab-case``` will be used on all parts individually!_
+_When using leaveSlashes the`kebab-case` will be used on all parts individually!_
 
 Example:
 ```xml
@@ -200,7 +200,7 @@ The allowed nested tags:
 | kebabcase  | propertyName | String  | Extra property to set            | n/a     |    no    |
 |            | leaveSlashes | Boolean | Leave slashes untouched          | false   |    no    |
 |            | delimiter    | String  | Delimiter used in _leaveSlashes_ | "/"     |    no    |
-_If you do not want to automate the property suffix assignment from the ```stringcase``` task,
+_If you do not want to automate the property suffix assignment from the`stringcase` task,
 you can use the _propertyName_ on the nested tags itself_
 
 Examples:

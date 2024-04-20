@@ -16,6 +16,10 @@ Installing Strivex Phing is easy. Follow these steps to install and use Strivex 
 Strivex Phing contains additions for Phing (3+), divided by its use:
 
 * __Strivex\Phing\Task__
-  - [String](docs/task/String)
+  - [Json](docs/task/json/JsonEditor.md)
+    
+    Read/edit a JSON file.
+
+  - [String](docs/task/string/String.md)
 
     Contains easy to use string tasks.

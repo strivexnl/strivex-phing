@@ -4,54 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "491b38e451a361c0888788a437d32025",
+    "content-hash": "0687b46157573bc0f595260635f51304",
     "packages": [
         {
-            "name": "strivexnl/strivex-commons",
-            "version": "1.0.1",
+            "name": "adbario/php-dot-notation",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/strivexnl/strivex-commons.git",
-                "reference": "be7d09d8b52477a1a8f9f3aba097d0b88092a3e0"
+                "url": "https://github.com/adbario/php-dot-notation.git",
+                "reference": "a94ce4493d19ea430baa8d7d210a2c9bd7129fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strivexnl/strivex-commons/zipball/be7d09d8b52477a1a8f9f3aba097d0b88092a3e0",
-                "reference": "be7d09d8b52477a1a8f9f3aba097d0b88092a3e0",
+                "url": "https://api.github.com/repos/adbario/php-dot-notation/zipball/a94ce4493d19ea430baa8d7d210a2c9bd7129fc2",
+                "reference": "a94ce4493d19ea430baa8d7d210a2c9bd7129fc2",
                 "shasum": ""
             },
             "require": {
-                "php": ">= 7.4"
+                "ext-json": "*",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.8",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.7"
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
                 "psr-4": {
-                    "Strivex\\Commons\\": "src/"
+                    "Adbar\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-3.0-or-later"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "S.E. Franke",
-                    "email": "sven.franke@strivex.nl"
+                    "name": "Riku Särkinen",
+                    "email": "riku@adbar.io"
                 }
             ],
-            "description": "Some custom easy to use functions",
+            "description": "PHP dot notation access to arrays",
+            "homepage": "https://github.com/adbario/php-dot-notation",
             "keywords": [
-                "custom",
-                "string"
+                "ArrayAccess",
+                "dotnotation"
             ],
             "support": {
-                "issues": "https://github.com/strivexnl/strivex-commons/issues",
-                "source": "https://github.com/strivexnl/strivex-commons/tree/v1.0.1"
+                "issues": "https://github.com/adbario/php-dot-notation/issues",
+                "source": "https://github.com/adbario/php-dot-notation/tree/3.3.0"
             },
-            "time": "2024-04-17T14:50:59+00:00"
-        }
-    ],
-    "packages-dev": [
+            "time": "2023-02-24T20:27:50+00:00"
+        },
         {
             "name": "phing/phing",
             "version": "3.0.0-rc6",
@@ -447,6 +455,51 @@
                 }
             ],
             "time": "2023-02-07T11:34:05+00:00"
+        },
+        {
+            "name": "strivexnl/strivex-commons",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/strivexnl/strivex-commons.git",
+                "reference": "6e96b645de9dcab792f7ad411ffc2d5b2ac52053"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/strivexnl/strivex-commons/zipball/6e96b645de9dcab792f7ad411ffc2d5b2ac52053",
+                "reference": "6e96b645de9dcab792f7ad411ffc2d5b2ac52053",
+                "shasum": ""
+            },
+            "require": {
+                "adbario/php-dot-notation": "^3.3",
+                "php": ">= 7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Strivex\\Commons\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "S.E. Franke",
+                    "email": "sven.franke@strivex.nl"
+                }
+            ],
+            "description": "Some custom easy to use functions",
+            "keywords": [
+                "custom",
+                "string"
+            ],
+            "support": {
+                "issues": "https://github.com/strivexnl/strivex-commons/issues",
+                "source": "https://github.com/strivexnl/strivex-commons/tree/v1.1.0"
+            },
+            "time": "2024-04-19T15:39:17+00:00"
         },
         {
             "name": "symfony/console",
@@ -1168,6 +1221,7 @@
             "time": "2024-01-23T14:51:35+00:00"
         }
     ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
@@ -1175,7 +1229,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">= 7.4"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }
