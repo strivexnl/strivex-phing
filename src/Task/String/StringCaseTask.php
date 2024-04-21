@@ -94,9 +94,7 @@ class StringCaseTask extends Task {
 //            } else {
 //                $props[] = sprintf('%s.%s', $this->getPropertyName(), $stringHelper->toLowerCase($suffix));
             }
-            $this->log($result);
             foreach ($props as $prop) {
-                $this->log('#=> ' . $prop);
                 $this->getProject()->setProperty($prop, $result);
             }
         }
