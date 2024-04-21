@@ -11,11 +11,19 @@ use Strivex\Phing\Task\Action\Json\GetAction;
 class JsonEditTask extends Task {
 
     private $file;
+    private $save = true;
     private $actions;
     
     public function setFile($file) {
         // Set value.
         $this->file = $file;
+        // Return.
+        return $this;
+    }
+    
+    public function setSave(bool $save) {
+        // Set value.
+        $this->save = $save;
         // Return.
         return $this;
     }
@@ -55,7 +63,11 @@ class JsonEditTask extends Task {
             $action->handleAction($this, $jsonEditor);
         }
         
-        $jsonEditor->save();
-        
+        if ($this->save) {
+            $this->log(sprintf('Saving %s', $this->file));
+            $jsonEditor->save();
+        } else {
+            $this->log(sprintf('%s not being saved.', $this->file));
+        }
     }
 }
