@@ -37,8 +37,15 @@ In the all our examples we will use this task name.
 |------------|----------------|---------------------------------|
 | jsoneditor | JsonEditorTask | The task to edit your JSON file |
 
-1. _We assume this task definition names._
+1_We assume this task definition names._
 2. _The task is in the `Strivex\Phing\Task\Json` namespace._
+
+The attributes you can use on the jsoneditor task:
+
+| Parameter | Type    | Description                            | Default | Required |
+|-----------|---------|----------------------------------------|---------|:--------:|
+| file      | String  | Path to the JSON file                  | n/a     |   yes    | 
+| save      | Boolean | Whether to save the changed JSON file. | true    |    no    |
 
 ## Available Sub Tasks in JsonEditor
 As seen in the examples above, we define the JsonEditor like `jsonedit`.

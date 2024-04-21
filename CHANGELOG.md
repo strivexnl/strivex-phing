@@ -1,3 +1,11 @@
+# Version 1.2.0
+- Changes custom Phing tasks
+  - Strivex\Phing\Task\Json\
+    - JsonEditorTask
+      - added `save` attribute
+- Updated README.md
+- Updated CHANGELOG.md
+
 # Version 1.1.0
 - Added custom Phing tasks
   - Strivex\Phing\Task\Json\
