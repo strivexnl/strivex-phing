@@ -1,3 +1,13 @@
+# Version 1.3.0
+- Changes custom Phing tasks
+  - Strivex\Phing\Task\Json\
+    - JsonEditorTask
+      - added `propertyName` attribute
+- Added strivex-commons.xml buildfile
+- Added docs/buildfiles/strivex-commons.xml.md
+- Updated README.md
+- Updated CHANGELOG.md
+
 # Version 1.2.0
 - Changes custom Phing tasks
   - Strivex\Phing\Task\Json\

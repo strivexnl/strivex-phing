@@ -11,12 +11,20 @@ use Strivex\Phing\Task\Action\Json\GetAction;
 class JsonEditTask extends Task {
 
     private $file;
+    private $propertyName;
     private $save = true;
     private $actions;
     
     public function setFile($file) {
         // Set value.
         $this->file = $file;
+        // Return.
+        return $this;
+    }
+    
+    public function setPropertyName($propertyName) {
+        // Set value.
+        $this->propertyName = $propertyName;
         // Return.
         return $this;
     }
@@ -68,6 +76,10 @@ class JsonEditTask extends Task {
             $jsonEditor->save();
         } else {
             $this->log(sprintf('%s not being saved.', $this->file));
+        }
+        
+        if ($this->propertyName) {
+            $this->getProject()->setProperty($this->propertyName, $jsonEditor->toString());
         }
     }
 }

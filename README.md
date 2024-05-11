@@ -12,9 +12,17 @@ Installing Strivex Phing is easy. Follow these steps to install and use Strivex 
    ```shell
    $ composer require strivexnl/strivex-phing
    ```
-## What is the package?
+## What is in the package?
 Strivex Phing contains additions for Phing (3+), divided by its use:
 
+### Build files
+* __buildfiles\strivex-commons.xml__
+  - [strivex-commons.xml](docs/buildfiles/strivex-commons.xml.md)
+
+  Build file with some default properties and targets.
+  
+
+### Custom tasks
 * __Strivex\Phing\Task__
   - [Json](docs/task/json/JsonEditor.md)
     

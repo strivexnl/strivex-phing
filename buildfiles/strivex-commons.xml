@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="StrivexCommons" default="default">
+
+    <property name="text.tab" value="&#9;" />
+    <property name="text.enter" value="&#10;" />
+
+    <!--
+    You can provide the following properties in your build file.
+
+        - exe.git (path to the Git executable)
+        - exe.phing (path to the Phing executable)
+        - file.autoload (path to autoload.php)
+
+    When omitted and without a default value, they will be asked for.
+    -->
+
+    <!-- Include autoload-->
+    <if>
+        <not>
+            <isset property="file.autoload" />
+        </not>
+        <then>
+            <input propertyName="file.autoload" message="Path to the autoload.php" promptChar=":" />
+        </then>
+    </if>
+    <includepath classpath="${file.autoload}" />
+
+    <!-- Custom task definitions -->
+    <taskdef name="lowercase" classname="Strivex\Phing\Task\String\ToLowerCaseTask" />
+    <taskdef name="uppercase" classname="Strivex\Phing\Task\String\ToUpperCaseTask" />
+    <taskdef name="camelcase" classname="Strivex\Phing\Task\String\ToCamelCaseTask" />
+    <taskdef name="pascalcase" classname="Strivex\Phing\Task\String\ToPascalCaseTask" />
+    <taskdef name="snakecase" classname="Strivex\Phing\Task\String\ToSnakeCaseTask" />
+    <taskdef name="kebabcase" classname="Strivex\Phing\Task\String\ToKebabCaseTask" />
+    <taskdef name="stringcase" classname="Strivex\Phing\Task\String\StringCaseTask" />
+    <taskdef name="jsonedit" classname="Strivex\Phing\Task\Json\JsonEditTask" />
+
+    <!-- ============== -->
+    <!-- DEFAULT TARGET -->
+    <!-- ============== -->
+    <target name="default" hidden="true" depends="params.init">
+        <echoproperties />
+        <echo msg="Please use one of the other available targets." />
+    </target>
+
+    <!-- =========== -->
+    <!-- PARAMS INIT -->
+    <!-- =========== -->
+    <target name="params.init" description="Add this as the last dependency in your targets." hidden="false">
+
+        <!-- exe.git -->
+        <if>
+            <not>
+                <isset property="exe.git" />
+            </not>
+            <then>
+                <input propertyName="exe.git" message="Path to the git executable" promptChar=":" />
+            </then>
+        </if>
+
+        <!-- exe.phing -->
+        <if>
+            <not>
+                <isset property="exe.phing" />
+            </not>
+            <then>
+                <resolvepath propertyName="exe.phing" file="./../../vendor/phing/phing/bin/phing" />
+            </then>
+        </if>
+
+        <if>
+            <not>
+                <isset property="package.name" />
+            </not>
+            <then>
+                <property name="package.name" value="${phing.project.name}" />
+            </then>
+        </if>
+
+        <stringcase input="${package.name}">
+            <lowercase propertyName="package.name.lowercase" />
+            <uppercase propertyName="package.name.uppercase" />
+            <pascalcase propertyName="package.name.pascalcase" />
+            <camelcase propertyName="package.name.camelcase" />
+            <snakecase propertyName="package.name.snakecase" />
+            <kebabcase propertyName="package.name.kebabase" />
+        </stringcase>
+
+    </target>
+
+</project>
