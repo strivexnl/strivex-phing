@@ -1,7 +1,7 @@
 {
     "name": "strivexnl/strivex-phing",
     "description": "Some custom Phing tasks",
-    "version": "1.3.0",
+    "version": "1.3.1s",
     "type": "phing-tasks",
     "keywords": [
         "phing",
@@ -19,8 +19,7 @@
         "strivexnl/strivex-commons": "^1.0",
         "phing/phing": "3.*@RC"
     },
-    "require-dev": {
-    },
+    "require-dev": {},
     "minimum-stability": "alpha",
     "autoload": {
         "psr-4": {
