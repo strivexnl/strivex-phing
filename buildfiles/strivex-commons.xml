@@ -83,7 +83,7 @@
             <pascalcase propertyName="package.name.pascalcase" />
             <camelcase propertyName="package.name.camelcase" />
             <snakecase propertyName="package.name.snakecase" />
-            <kebabcase propertyName="package.name.kebabase" />
+            <kebabcase propertyName="package.name.kebabcase" />
         </stringcase>
 
     </target>
